@@ -30,30 +30,53 @@ Here we will work through examples of Alerts generated in Sentinel. We will obse
 <br />
 
 <p>
-2. Select the Alert you want. Here we will look at a successful brute force attempt in Azure Active Directory (Entra ID).
+2. Select the Alert you want. Here we will look at a successful brute force attempt in Azure Active Directory (Entra ID). We can already see some basic information about this Incident. The number of events and alerts, the time created and last updated, and the IP address and username associated with the alert.
 </p>
 
-![2  Select Alert ](https://github.com/user-attachments/assets/bfb423fc-9826-4c65-bd10-899ec38ecb4d)
+![4  Owner assigned see info](https://github.com/user-attachments/assets/e4c045d1-cd46-4059-a87c-caac651f73d2)
 
 
 <p>
- 3. Open Windows Event Viewer
+ 3. Set the 3 criteria by selecting each respective section at the top of the Alert details window. Then select the "View Full Details" tab at the bottom. 
 </p>
-<p>
-<img src="https://i.imgur.com/y72gJDw.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-</p>
+
+![5  Set Status to active](https://github.com/user-attachments/assets/c56f0890-e6f5-4d6e-8a65-9d69e58f9719)
+
+
 
 <p>   
-4. Under Windows Logs, Select Application.
-<p>
-<img src="https://i.imgur.com/WJjbw1j.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+4. Here we see more details about the incident, and we can further investigate.  
 </p>
+
+![8  Full details page, Activty Log](https://github.com/user-attachments/assets/3fdc1b69-246e-4c3f-94fc-6f95578732bd)
+
+<p>
+5. If we select the Entities option, we can see specific information about the IP address associated with the activity. We can also see which log this Alert is generated from.
+
+![10  observe Entities associted, Investigate](https://github.com/user-attachments/assets/2b6bd8fc-b83d-486c-95dc-33bdec3395ee)
+
 
 <p>
 5. Here we can see our failed logon attempts and more details about these events in the bottom portion of the window.
 <p>
 <img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+
+
+<p>
+5. Here we can see our failed logon attempts and more details about these events in the bottom portion of the window.
+<p>
+<img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+
+<p>
+5. Here we can see our failed logon attempts and more details about these events in the bottom portion of the window.
+<p>
+<img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
 
 [Click here to return to my Github Homepage](https://github.com/BryanEAtherton)
 
