@@ -57,22 +57,43 @@ Here we will work through examples of Alerts generated in Sentinel. We will obse
 
 
 <p>
-5. Here we can see our failed logon attempts and more details about these events in the bottom portion of the window.
+6. Next, we will copy the query rule for this alert and use Log Analytics Workspace to investigate further.
+
+![2  Get query for alert](https://github.com/user-attachments/assets/2e32fbdd-bdb2-4b2d-bf50-00b34c0795c2)
+
+
+
+<p>
+7. We can break down the large query rule into more specific queries to better understand the cause and nature of the Alert. 
+
+![4  narrowed query to usernameid](https://github.com/user-attachments/assets/bcd6ef3c-3984-4916-aa5a-23eee14c2e41)
+
+
+
+
+<p>
+8. With this query, we can see that the IP address observed in Sentinel is the only one associated with a successful Brute Force attempt.  
+
+![5  Where IP was successful](https://github.com/user-attachments/assets/5854445f-b51c-446c-82ba-038eb6163921)
+
+
+
+<p>
+9. 
 <p>
 <img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 
 <p>
-5. Here we can see our failed logon attempts and more details about these events in the bottom portion of the window.
+10. 
 <p>
 <img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 
-
 <p>
-5. Here we can see our failed logon attempts and more details about these events in the bottom portion of the window.
+11. 
 <p>
 <img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
