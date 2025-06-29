@@ -2,11 +2,11 @@
 
 
 <p align="center">
-<img src="https://i.imgur.com/Yjq38L7.jpeg"/>
+<img src="https://www.socinvestigation.com/wp-content/uploads/2022/04/Azure-Sentinel-SIEM-Architecture.jpg"height="40%" width="40%" alt="Disk Sanitization Steps"/>
 </p>
-
+<p></p>
 <h1>Working through Alerts in Sentinel</h1>
-Here we will work through examples of Alerts generated in Sentinel. We will observe and set ownership, severity and staus of the alert, then investigate to determine the lagitimacy of the alert. 
+Here we will work through an example of alerts generated in Sentinel. We will observe and set the ownership, severity, and status of the alert. Then investigate to determine the legitimacy of the alert. 
 
 <h2>Environments and Technologies Used</h2>
 
@@ -16,7 +16,7 @@ Here we will work through examples of Alerts generated in Sentinel. We will obse
 
 
 
-<h2>Set alert ownership, severity, and status </h2>
+<h2>Set the alert ownership, severity, and status </h2>
 
 <br />
 
@@ -30,7 +30,7 @@ Here we will work through examples of Alerts generated in Sentinel. We will obse
 <br />
 
 <p>
-2. Select the Alert you want. Here we will look at a successful brute force attempt in Azure Active Directory (Entra ID). We can already see some basic information about this Incident. The number of events and alerts, the time created and last updated, and the IP address and username associated with the alert.
+2. Select the Alert you want. Here we will look at a successful brute force attempt in Azure Active Directory (Entra ID). This alert is generated when the same entity fails several log-on attempts, then successfully logs on. We can already see some basic information about this Incident: the number of events and alerts, the time created and last updated, and the IP address and username associated with the alert.
 </p>
 
 ![4  Owner assigned see info](https://github.com/user-attachments/assets/e4c045d1-cd46-4059-a87c-caac651f73d2)
@@ -42,7 +42,7 @@ Here we will work through examples of Alerts generated in Sentinel. We will obse
 
 ![5  Set Status to active](https://github.com/user-attachments/assets/c56f0890-e6f5-4d6e-8a65-9d69e58f9719)
 
-
+<h2>Investigate the Alert </h2>
 
 <p>   
 4. Here we see more details about the incident, and we can further investigate.  
@@ -69,34 +69,25 @@ Here we will work through examples of Alerts generated in Sentinel. We will obse
 ![4  narrowed query to usernameid](https://github.com/user-attachments/assets/bcd6ef3c-3984-4916-aa5a-23eee14c2e41)
 
 
-
-
 <p>
-8. With this query, we can see that the IP address observed in Sentinel is the only one associated with a successful Brute Force attempt.  
+8. With this query, we can see that the IP address observed in Sentinel is the only one associated with a successful Brute Force attempt. This IP address is for a known computer on the network, and these alerts were generated intentionally. 
 
 ![5  Where IP was successful](https://github.com/user-attachments/assets/5854445f-b51c-446c-82ba-038eb6163921)
 
-
-
-<p>
-9. 
-<p>
-<img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-
+<h2>Close out the alert</h2>
 
 <p>
-10. 
-<p>
-<img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+9. Having discovered the cause of the alert and verified the entities involved, we can close out the alert. 
+ 
+ - Return to the Incident page in Sentinel and select the alert. 
+
+ - Change the status to closed and enter any appropriate notes. We will classify this alert as "Benign Positive-suspicious but expected."
+ 
+ While a successful logon after several failed logons from the same entity is cause for some alarm, we determined the activity was intentional, came from a trusted source, and was not malicious in nature.
+
+![8  Paste notes in comments](https://github.com/user-attachments/assets/4fd70268-d9e3-4d96-8afe-11f906744f2f)
 
 
-<p>
-11. 
-<p>
-<img src="https://i.imgur.com/F7e5bMk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 
 
 [Click here to return to my Github Homepage](https://github.com/BryanEAtherton)
